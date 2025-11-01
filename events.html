@@ -1,0 +1,655 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>WebinarHub - Live Webinars & Professional Learning</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="font-flaticon/flaticon.css">
+    <link rel="stylesheet" href="css/dripicons.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* Search icon styling */
+        .search-top2 {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .search-top2 ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-top2 li {
+            margin-left: 0;
+        }
+
+        .search-top2 li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: #fff;
+            border: 2px solid #fe8366;
+            border-radius: 50%;
+            color: #fe8366;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 2.5px 4.33px 15px 0px rgba(250, 162, 146, 0.2);
+        }
+
+        .search-top2 li a:hover {
+            background-color: #fe8366;
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 2.5px 4.33px 20px 0px rgba(250, 162, 146, 0.4);
+        }
+
+        /* Logo text styling */
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: #002e5b;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: #fe8366;
+        }
+
+        /* Center navigation */
+        .main-menu ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-menu ul li {
+            margin: 0 15px;
+        }
+
+        @media (max-width: 991px) {
+            .search-top2 {
+                display: none !important;
+            }
+
+            .logo-text {
+                font-size: 22px;
+                margin-bottom: 18px;
+            }
+
+            .main-menu {
+                display: none !important;
+            }
+        }
+
+        /* Meanmenu positioning for mobile */
+        @media (max-width: 991px) {
+            .header-area .second-menu .row {
+                align-items: center;
+                height: 70px;
+            }
+
+            .mean-container .mean-bar {
+                position: relative !important;
+                top: 0 !important;
+                right: 0 !important;
+                width: auto !important;
+                height: auto !important;
+                float: right !important;
+                z-index: 9999;
+            }
+
+            .mean-container a.meanmenu-reveal {
+                position: relative !important;
+                margin-top: 0 !important;
+                top: 50% !important;
+                transform: translateY(-50%) !important;
+                right: 0 !important;
+            }
+
+            .header-area {
+                position: relative;
+            }
+
+            /* Full width mobile navigation */
+            .mean-container .mean-nav {
+                width: 100vw !important;
+                left: 0 !important;
+                right: 0 !important;
+                margin-left: calc(-50vw + 50%) !important;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                z-index: 9998;
+            }
+
+            .mean-container .mean-nav ul li a {
+                padding: 15px 20px !important;
+                width: calc(100% - 40px) !important;
+                font-size: 16px !important;
+                border-bottom: 1px solid #f0f0f0 !important;
+                border-top: none !important;
+            }
+
+            .mean-container .mean-nav ul li:first-child a {
+                border-top: 1px solid #f0f0f0 !important;
+            }
+
+            .mean-container .mean-nav ul li a:hover {
+                background: #fe8366 !important;
+                color: #fff !important;
+            }
+
+            /* Logo and hamburger alignment */
+            .header-right {
+                height: 70px;
+                margin-top: 18px;
+                display: flex !important;
+                align-items: center !important;
+            }
+
+            .logo {
+                height: 70px;
+                display: flex !important;
+                align-items: center !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header-area header-three">
+        <div id="header-sticky" class="menu-area">
+            <div class="container">
+                <div class="second-menu">
+                    <div class="row align-items-center">
+                        <!-- Logo - Left -->
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                            <div class="logo">
+                                <a href="index.html" class="logo-text">Webinar<span>Hub</span></a>
+                            </div>
+                        </div>
+                        <!-- Navigation - Center (Desktop only) -->
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block">
+                            <div class="main-menu text-center">
+                                <nav id="mobile-menu" style="display: block;">
+                                    <ul>
+                                        <li class="sub">
+                                            <a href="index.html">Home</a>
+                                        </li>
+                                        <li class="sub"><a href="pricing.html">Content & Pricing</a></li>
+                                        <li class="sub">
+                                            <a href="coaches.html">Coaches</a>
+                                        </li>
+                                        <li class="sub">
+                                            <a href="blog.html">Blog</a>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Search & Hamburger - Right -->
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                            <div class="header-right d-flex align-items-center justify-content-end">
+                                <!-- Search icon for desktop -->
+                                <div class="search-top2 d-none d-lg-block">
+                                    <ul>
+                                        <li><a href="#" class="search-trigger" data-toggle="modal"
+                                                data-target=".bs-example-modal-lg"><i class="fas fa-search"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Mobile menu toggle -->
+                                <div class="mobile-menu d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+
+    <!-- main-area -->
+    <main>
+
+        <!-- search-popup -->
+        <div class="modal fade bs-example-modal-lg search-bg popup1" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content search-popup">
+                    <div class="text-center">
+                        <a href="#" class="close2" data-dismiss="modal" aria-label="Close">× close</a>
+                    </div>
+                    <div class="row search-outer">
+                        <div class="col-md-11"><input type="text"
+                                placeholder="Search webinars, topics, or coaches..." /></div>
+                        <div class="col-md-1 text-right"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /search-popup -->
+        <!-- /search-popup -->
+        <!-- breadcrumb-area -->
+        <!-- <section class="breadcrumb-area d-flex align-items-center" style="background-image:url(img/testimonial/test-bg.png)">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="breadcrumb-wrap text-left">
+                                <div class="breadcrumb-title">
+                                    <h2> Events </h2>    
+                                    <div class="breadcrumb-wrap">
+                              
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Events</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section> -->
+        <!-- breadcrumb-area-end -->
+        <!-- eventes-area -->
+        <section id="eventes" class="eventes-area fix pt-120 pb-120"
+            style=" background-image: url(img/bg/event-bg-aliments.png); background-repeat: no-repeat; background-position: center;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title center-align text-center mb-50">
+                            <h5>Live Webinars</h5>
+                            <h2>
+                                Upcoming Webinars
+                            </h2>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="eventes-box">
+                            <div class="date-box">
+                                <h3>15</h3>
+                                <h5>Dec, 2025</h5>
+                            </div>
+                            <div class="text">
+                                <h5><a href="events-details.html">Digital Marketing Mastery: From Strategy to ROI</a>
+                                </h5>
+                                <ul>
+                                    <li><i class="fal fa-clock"></i> 2:00PM - 3:30PM EST</li>
+                                    <li><i class="icon fal fa-video"></i> Online Webinar</li>
+                                </ul>
+                                <p>Learn proven digital marketing strategies that drive real results. Expert insights on
+                                    SEO, social media, and conversion optimization with live Q&A session.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="eventes-box">
+                            <div class="date-box">
+                                <h3>22</h3>
+                                <h5>Dec, 2025</h5>
+                            </div>
+                            <div class="text">
+                                <h5><a href="events-details.html">Leadership in the Digital Age</a></h5>
+                                <ul>
+                                    <li><i class="fal fa-clock"></i> 1:00PM - 2:30PM EST</li>
+                                    <li><i class="icon fal fa-video"></i> Online Webinar</li>
+                                </ul>
+                                <p>Discover modern leadership techniques for remote teams. Interactive session on
+                                    building trust, communication, and driving performance in digital workplaces.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="eventes-box">
+                            <div class="date-box">
+                                <h3>05</h3>
+                                <h5>Jan, 2026</h5>
+                            </div>
+                            <div class="text">
+                                <h5><a href="events-details.html">AI & Machine Learning for Business</a></h5>
+                                <ul>
+                                    <li><i class="fal fa-clock"></i> 3:00PM - 4:30PM EST</li>
+                                    <li><i class="icon fal fa-video"></i> Online Webinar</li>
+                                </ul>
+                                <p>Practical applications of AI in business operations. Learn how to implement machine
+                                    learning solutions and automate processes for increased efficiency.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="eventes-box">
+                            <div class="date-box">
+                                <h3>12</h3>
+                                <h5>Jan, 2026</h5>
+                            </div>
+                            <div class="text">
+                                <h5><a href="events-details.html">Financial Planning & Investment Strategies</a></h5>
+                                <ul>
+                                    <li><i class="fal fa-clock"></i> 11:00AM - 12:30PM EST</li>
+                                    <li><i class="icon fal fa-video"></i> Online Webinar</li>
+                                </ul>
+                                <p>Master personal and business financial planning. Expert guidance on investment
+                                    portfolios, risk management, and building long-term wealth strategies.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="eventes-box">
+                            <div class="date-box">
+                                <h3>18</h3>
+                                <h5>Jan, 2026</h5>
+                            </div>
+                            <div class="text">
+                                <h5><a href="events-details.html">Public Speaking & Presentation Skills</a></h5>
+                                <ul>
+                                    <li><i class="fal fa-clock"></i> 2:00PM - 3:30PM EST</li>
+                                    <li><i class="icon fal fa-video"></i> Online Webinar</li>
+                                </ul>
+                                <p>Overcome speaking anxiety and deliver compelling presentations. Interactive workshop
+                                    with practical exercises and personalized feedback from expert coaches.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="eventes-box">
+                            <div class="date-box">
+                                <h3>25</h3>
+                                <h5>Jan, 2026</h5>
+                            </div>
+                            <div class="text">
+                                <h5><a href="events-details.html">E-commerce Growth Strategies</a></h5>
+                                <ul>
+                                    <li><i class="fal fa-clock"></i> 4:00PM - 5:30PM EST</li>
+                                    <li><i class="icon fal fa-video"></i> Online Webinar</li>
+                                </ul>
+                                <p>Scale your online business with proven e-commerce tactics. Learn about customer
+                                    acquisition, retention strategies, and optimizing conversion rates.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="eventes-box">
+                            <div class="date-box">
+                                <h3>02</h3>
+                                <h5>Feb, 2026</h5>
+                            </div>
+                            <div class="text">
+                                <h5><a href="events-details.html">Data Analytics & Business Intelligence</a></h5>
+                                <ul>
+                                    <li><i class="fal fa-clock"></i> 1:00PM - 2:30PM EST</li>
+                                    <li><i class="icon fal fa-video"></i> Online Webinar</li>
+                                </ul>
+                                <p>Transform data into actionable business insights. Learn visualization techniques,
+                                    dashboard creation, and data-driven decision making processes.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+
+                        <div class="eventes-box">
+                            <div class="date-box">
+                                <h3>08</h3>
+                                <h5>Feb, 2026</h5>
+                            </div>
+                            <div class="text">
+                                <h5><a href="events-details.html">Cybersecurity Essentials for Business</a></h5>
+                                <ul>
+                                    <li><i class="fal fa-clock"></i> 3:00PM - 4:30PM EST</li>
+                                    <li><i class="icon fal fa-video"></i> Online Webinar</li>
+                                </ul>
+                                <p>Protect your business from cyber threats. Comprehensive guide to security protocols,
+                                    risk assessment, and building a robust cybersecurity framework.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-12 col-md-12 text-center">
+                        <div class="pagination-wrap mt-50">
+                            <nav>
+                                <ul class="pagination">
+                                    <li class="page-item"><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
+                                    <li class="page-item active"><a href="#">1</a></li>
+                                    <li class="page-item"><a href="#">2</a></li>
+                                    <li class="page-item"><a href="#">3</a></li>
+                                    <li class="page-item"><a href="#">...</a></li>
+                                    <li class="page-item"><a href="#">10</a></li>
+                                    <li class="page-item"><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- eventes-area-end -->
+
+    </main>
+    <!-- main-area-end -->
+    <!-- footer -->
+    <footer class="footer-bg footer-p fix"
+        style=" background-image: url(img/bg/footer-bg.png); background-repeat: no-repeat; background-position: center;">
+        <!-- <div class="footer-top  pt-70 pb-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-sm-12">
+                        <div class="footer-widget mb-30">
+
+                            <img src="img/logo/f_logo.png" alt="img">
+
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-sm-12">
+                        <div class="footer-widget footer-link mt-20 text-center">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html"> About Us</a></li>
+                                <li><a href="services.html"> Courses </a></li>
+                                <li><a href="contact.html"> Events</a></li>
+                                <li><a href="blog.html">Blog </a></li>
+                                <li><a href="blog.html">Contact Us </a></li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-sm-12">
+                        <div class="footer-widget footer-social mt-15  text-right text-xl-right">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="footer-center  pt-70 pb-40">
+            <div class="container">
+                <div class="row justify-content-between">
+
+                    <div class="col-xl-3 col-lg-3 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>About Us</h2>
+                            </div>
+                            <div class="footer-link">
+                                WebinarHub is your premier destination for professional development through interactive
+                                online learning. We connect industry experts with ambitious professionals, delivering
+                                high-quality webinars, coaching programs, and educational content that drives real
+                                career growth and business success.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>Contact Us</h2>
+                            </div>
+                            <div class="f-contact">
+                                <ul>
+                                    <li>
+                                        <i class="icon fal fa-map-marker-check"></i>
+                                        <span>1247/Plot No. 39, 15th Phase, <br>LHB Colony, Kanpur</span>
+                                    </li>
+                                    <li>
+                                        <i class="icon fal fa-phone"></i>
+                                        <span>1800-121-3637<br>+91-7052-101-786</span>
+                                    </li>
+                                    <li><i class="icon fal fa-envelope"></i>
+                                        <span>
+                                            <a href="mailto:info@example.com">info@example.com</a>
+                                            <br>
+                                            <a href="mailto:help@example.com">help@example.com</a>
+                                        </span>
+                                    </li>
+
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>Our Services</h2>
+                            </div>
+                            <div class="footer-link">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">Content & Pricing</a></li>
+                                    <li><a href="coaches.html">Coaches</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-3 col-lg-3 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>Company Details</h2>
+                            </div>
+                            <div class="footer-link">
+                                WebinarHub - Your premier destination for online learning and professional development
+                                through interactive webinars.
+                                <br>
+                                For enquiries and support, please visit the <a href="contact.html">Contact</a> page.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        Copyright &copy; 2025 WebHub. All rights reserved.
+                    </div>
+                    <div class="col-lg-6 text-right text-xl-right">
+                        <ul>
+                            <li><a href="privacy.html">Privacy Statement</a></li>
+                            <li><a href="terms.html">Terms</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-end -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/one-page-nav-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/paroller.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/js_isotope.pkgd.min.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/parallax-scroll.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/element-in-view.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

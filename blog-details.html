@@ -1,0 +1,1070 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>WebinarHub - Blog Details</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="font-flaticon/flaticon.css">
+    <link rel="stylesheet" href="css/dripicons.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/meanmenu.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* Custom styles for video and images */
+        .play-button-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 107, 53, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+            animation: pulse 2s infinite;
+        }
+
+        .play-button:hover {
+            background: #ff6b35;
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 107, 53, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+            }
+        }
+
+        .video-img {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            min-height: 400px;
+        }
+
+        .video-i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .slider-img img,
+        .s-about-img img {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .box-courses img {
+            transition: transform 0.3s ease;
+        }
+
+        .box-courses:hover img {
+            transform: scale(1.05);
+        }
+
+        .single-testimonial .testi-author img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+        }
+
+        .blog-thumb2 img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .single-post2:hover .blog-thumb2 img {
+            transform: scale(1.05);
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-decoration: none;
+        }
+
+        .play-btn-small {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 107, 53, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .play-btn-small:hover {
+            background: #ff6b35;
+            transform: scale(1.1);
+        }
+
+        .video-info h5 {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .video-info p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .video-meta {
+            display: flex;
+            gap: 20px;
+        }
+
+        .video-meta span {
+            color: #999;
+            font-size: 0.8rem;
+        }
+
+        .video-meta i {
+            margin-right: 5px;
+            color: #ff6b35;
+        }
+
+        /* Search icon styling */
+        .search-top2 {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .search-top2 ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-top2 li {
+            margin-left: 0;
+        }
+        .search-top2 li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: #fff;
+            border: 2px solid #fe8366;
+            border-radius: 50%;
+            color: #fe8366;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 2.5px 4.33px 15px 0px rgba(250, 162, 146, 0.2);
+        }
+        .search-top2 li a:hover {
+            background-color: #fe8366;
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 2.5px 4.33px 20px 0px rgba(250, 162, 146, 0.4);
+        }
+        /* Logo text styling */
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: #002e5b;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            color: #fe8366;
+        }
+        /* Center navigation */
+        .main-menu ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .main-menu ul li {
+            margin: 0 15px;
+        }
+        /* Hide search on mobile, show in hamburger */
+        .search-mobile-hidden {
+            display: none;
+        }
+        /* Logo mobile styling */
+        .logo-text {
+            transition: all 0.3s ease;
+        }
+        @media (max-width: 991px) {
+            .search-top2 {
+                display: none !important;
+            }
+            .search-mobile-hidden {
+                display: block;
+            }
+            .main-menu {
+                display: none !important;
+            }
+            .logo-text {
+                font-size: 22px;
+            }
+        }
+        /* Meanmenu positioning for mobile */
+        @media (max-width: 991px) {
+            .header-area .second-menu .row {
+                align-items: center;
+                height: 70px;
+            }
+            .mean-container .mean-bar {
+                position: relative !important;
+                top: 0 !important;
+                right: 0 !important;
+                width: auto !important;
+                height: auto !important;
+                float: right !important;
+                z-index: 9999;
+            }
+            .mean-container a.meanmenu-reveal {
+                position: relative !important;
+                margin-top: 0 !important;
+                top: 50% !important;
+                transform: translateY(-50%) !important;
+                right: 0 !important;
+            }
+            .header-area {
+                position: relative;
+            }
+            /* Full width mobile navigation */
+            .mean-container .mean-nav {
+                width: 100vw !important;
+                left: 0 !important;
+                right: 0 !important;
+                margin-left: calc(-50vw + 50%) !important;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                z-index: 9998;
+            }
+            .mean-container .mean-nav ul li a {
+                padding: 15px 20px !important;
+                width: calc(100% - 40px) !important;
+                font-size: 16px !important;
+                border-bottom: 1px solid #f0f0f0 !important;
+                border-top: none !important;
+            }
+            .mean-container .mean-nav ul li:first-child a {
+                border-top: 1px solid #f0f0f0 !important;
+            }
+            .mean-container .mean-nav ul li a:hover {
+                background: #fe8366 !important;
+                color: #fff !important;
+            }
+            /* Logo and hamburger alignment */
+            .header-right {
+                height: 70px;
+                display: flex !important;
+                align-items: center !important;
+            }
+            .logo {
+                height: 70px;
+                display: flex !important;
+                align-items: center !important;
+            }
+        }
+        .search-top2 li {
+            margin-left: 0;
+        }
+
+        .search-top2 li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: #fff;
+            border: 2px solid #fe8366;
+            border-radius: 50%;
+            color: #fe8366;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 2.5px 4.33px 15px 0px rgba(250, 162, 146, 0.2);
+        }
+
+        .search-top2 li a:hover {
+            background-color: #fe8366;
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 2.5px 4.33px 20px 0px rgba(250, 162, 146, 0.4);
+        }
+
+        /* Logo text styling */
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: #002e5b;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: -0.5px;
+        }
+        .logo-text span {
+            color: #fe8366;
+        }
+        /* Center navigation */
+        .main-menu ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .main-menu ul li {
+            margin: 0 15px;
+        }
+        @media (max-width: 991px) {
+            .search-top2 {
+                display: none !important;
+            }
+            .logo-text {
+                font-size: 22px;
+            }
+            .main-menu {
+                display: none !important;
+            }
+        }
+        /* Meanmenu positioning for mobile */
+        @media (max-width: 991px) {
+            .mean-container .mean-bar {
+                position: absolute !important;
+                top: 0 !important;
+                right: 15px !important;
+                width: auto !important;
+                height: auto !important;
+                float: none !important;
+                z-index: 9999;
+            }
+            .mean-container a.meanmenu-reveal {
+                position: relative !important;
+                margin-top: 0 !important;
+                top: 0 !important;
+                transform: none;
+            }
+            .header-area {
+                position: relative;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header-area header-three">
+        <div id="header-sticky" class="menu-area">
+            <div class="container">
+                <div class="second-menu">
+                    <div class="row align-items-center">
+                        <!-- Logo - Left -->
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                            <div class="logo">
+                                <a href="index.html" class="logo-text">Webinar<span>Hub</span></a>
+                            </div>
+                        </div>
+                        <!-- Navigation - Center (Desktop only) -->
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block">
+                            <div class="main-menu text-center">
+                                <nav id="mobile-menu" style="display: block;">
+                                    <ul>
+                                        <li class="sub">
+                                            <a href="index.html">Home</a>
+                                        </li>
+                                        <li class="sub"><a href="pricing.html">Content & Pricing</a></li>
+                                        <li class="sub">
+                                            <a href="coaches.html">Coaches</a>
+                                        </li>
+                                        <li class="sub">
+                                            <a href="blog.html">Blog</a>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Search & Hamburger - Right -->
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                            <div class="header-right d-flex align-items-center justify-content-end">
+                                <!-- Search icon for desktop -->
+                                <div class="search-top2 d-none d-lg-block">
+                                    <ul>
+                                        <li><a href="#" class="search-trigger" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fas fa-search"></i></a></li>
+                                    </ul>
+                                </div>
+                                <!-- Mobile menu toggle -->
+                                <div class="mobile-menu d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <!-- offcanvas-area -->
+    <!-- <div class="offcanvas-menu">
+        <span class="menu-close"><i class="fas fa-times"></i></span>
+        <form role="search" method="get" id="searchform" class="searchform"
+            action="http://wordpress.zcube.in/xconsulta/">
+            <input type="text" name="s" id="search" value="" placeholder="Search" />
+            <button><i class="fa fa-search"></i></button>
+        </form>
+
+
+        <div id="cssmenu3" class="menu-one-page-menu-container">
+            <ul id="menu-one-page-menu-2" class="menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="index.html">Home</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="about.html">About Us</a>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="services.html">Services</a>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="pricing.html">Pricing </a>
+                </li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="team.html">Team </a></li>
+
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="projects.html">Gallery
+                        Study</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="blog.html">Blog</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="cssmenu2" class="menu-one-page-menu-container">
+            <ul id="menu-one-page-menu-1" class="menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#home"><span>+8 12
+                            3456897</span></a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom"><a
+                        href="#howitwork"><span>info@example.com</span></a></li>
+            </ul>
+        </div>
+    </div> -->
+    <div class="offcanvas-overly"></div>
+    <!-- offcanvas-end -->
+    <!-- main-area -->
+    <main>
+
+        <!-- search-popup -->
+        <div class="modal fade bs-example-modal-lg search-bg popup1" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content search-popup">
+                    <div class="text-center">
+                        <a href="#" class="close2" data-dismiss="modal" aria-label="Close">× close</a>
+                    </div>
+                    <div class="row search-outer">
+                        <div class="col-md-11"><input type="text"
+                                placeholder="Search webinars, topics, or coaches..." /></div>
+                        <div class="col-md-1 text-right"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /search-popup -->
+        <!-- breadcrumb-area -->
+        <!-- <section class="breadcrumb-area d-flex align-items-center" style="background-image:url(img/testimonial/test-bg.png)">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="breadcrumb-wrap text-left">
+                                <div class="breadcrumb-title">
+                                    <h2>Blog Deatils</h2>    
+                                    <div class="breadcrumb-wrap">
+                              
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Blog Deatils</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section> -->
+        <!-- breadcrumb-area-end -->
+        <!-- inner-blog -->
+        <section class="inner-blog b-details-p pt-120 pb-80">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="blog-details-wrap">
+                            <div class="details__content pb-30">
+                                <h2>How Interactive Webinars Are Revolutionizing Professional Development in 2025</h2>
+                                <div class="meta-info">
+                                    <ul>
+                                        <li><i class="fal fa-eye"></i> 2,847 Views </li>
+                                        <li><i class="fal fa-comments"></i> 156 Comments</li>
+                                        <li><i class="fal fa-calendar-alt"></i> 15th January 2025</li>
+                                    </ul>
+                                </div>
+                                <p>The landscape of professional development has undergone a dramatic transformation in
+                                    recent years, with interactive webinars emerging as the gold standard for skill
+                                    acquisition and career advancement. Unlike traditional training methods, modern
+                                    webinars offer real-time engagement, expert interaction, and measurable learning
+                                    outcomes that drive tangible results.</p>
+                                <p>At WebinarHub, we've witnessed firsthand how interactive webinars are reshaping the
+                                    way professionals learn and grow. Our platform has facilitated over 10,000 live
+                                    sessions, connecting industry experts with ambitious learners across 50+ countries.
+                                    The results speak for themselves: 89% of participants report immediate application
+                                    of learned skills, while 76% achieve measurable career advancement within six months
+                                    of completing our webinar series.</p>
+                                <blockquote>
+                                    <footer>By Dr. Sarah Mitchell, Learning & Development Expert</footer>
+                                    <h3>"Interactive webinars have become the cornerstone of modern professional
+                                        development. They combine the accessibility of online learning with the
+                                        engagement of face-to-face instruction, creating an optimal environment for
+                                        skill acquisition and knowledge retention."</h3>
+                                </blockquote>
+                                <p>The key differentiator of interactive webinars lies in their ability to create
+                                    meaningful connections between learners and industry experts. Through features like
+                                    live Q&A sessions, breakout rooms, polls, and collaborative exercises, participants
+                                    don't just consume content—they actively engage with it. This engagement leads to
+                                    deeper understanding, better retention, and more practical application of learned
+                                    concepts.</p>
+                                <div class="details__content-img">
+                                    <img src="https://picsum.photos/800/400?random=1"
+                                        alt="Professional webinar setup with multiple screens and participants">
+                                </div>
+                                <h3>The Five Pillars of Effective Webinar Learning</h3>
+                                <p><strong>1. Expert-Led Content:</strong> Our webinars feature industry leaders who
+                                    bring real-world experience and cutting-edge insights. These aren't theoretical
+                                    discussions—they're practical sessions led by professionals who've achieved
+                                    measurable success in their fields.</p>
+                                <p><strong>2. Interactive Engagement:</strong> Through live polls, Q&A sessions, and
+                                    collaborative exercises, participants become active contributors rather than passive
+                                    observers. This engagement increases retention rates by up to 400% compared to
+                                    traditional lecture formats.</p>
+                                <p><strong>3. Peer Networking:</strong> Webinars create natural networking
+                                    opportunities, connecting like-minded professionals from diverse backgrounds and
+                                    industries. Many of our participants report forming valuable professional
+                                    relationships that extend far beyond the session.</p>
+                                <p><strong>4. Actionable Takeaways:</strong> Every webinar includes downloadable
+                                    resources, templates, and step-by-step guides that participants can implement
+                                    immediately. This practical approach ensures learning translates into real-world
+                                    results.</p>
+                                <p><strong>5. Ongoing Support:</strong> Learning doesn't end when the webinar does. Our
+                                    platform provides access to recorded sessions, follow-up resources, and community
+                                    forums where participants can continue discussions and seek guidance.</p>
+                                <figure>
+                                    <img src="https://picsum.photos/800/500?random=2"
+                                        alt="Interactive webinar session in progress">
+                                    <p>A typical WebinarHub session featuring live interaction between expert presenters
+                                        and global participants. Our advanced platform technology enables seamless
+                                        communication, screen sharing, and collaborative exercises that make online
+                                        learning as engaging as in-person workshops. The integration of real-time
+                                        analytics helps both instructors and learners track progress and optimize the
+                                        learning experience for maximum impact.</p>
+                                </figure>
+                                <div class="row">
+                                    <div class="col-xl-12 col-md-12">
+                                        <div class="post__tag">
+                                            <h5>Related Tags</h5>
+                                            <ul>
+                                                <li><a href="#">webinars</a></li>
+                                                <li><a href="#">professional-development</a></li>
+                                                <li><a href="#">online-learning</a></li>
+                                                <li><a href="#">career-growth</a></li>
+                                                <li><a href="#">interactive-training</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="posts_navigation pt-35 pb-35">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-4 col-md-5">
+                                        <div class="prev-link">
+                                            <span>Prev Post</span>
+                                            <h4><a href="#">Webinar Tools</a></h4>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-xl-4 col-md-2 text-left text-md-center">
+                                        <a href="blog.html" class="blog-filter"><img
+                                                src="https://via.placeholder.com/50x50/ff6b35/ffffff?text=B"
+                                                alt="Blog navigation icon"></a>
+                                    </div> -->
+                                    <div class="col-xl-4 col-md-5">
+                                        <div class="next-link text-left text-md-right">
+                                            <span>next Post</span>
+                                            <h4><a href="#">Your Personal</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="related__post mt-45 mb-85">
+                                <div class="post-title">
+                                    <h4>Related Post</h4>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="related-post-wrap mb-30">
+                                            <div class="post-thumb">
+                                                <img src="https://picsum.photos/400/250?random=3"
+                                                    alt="Webinar engagement strategies">
+                                            </div>
+                                            <div class="rp__content">
+                                                <h3><a href="#">10 Proven Strategies to Maximize Webinar Engagement</a>
+                                                </h3>
+                                                <p>Discover the techniques top webinar hosts use to keep audiences
+                                                    engaged, increase participation rates, and drive meaningful learning
+                                                    outcomes.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="related-post-wrap mb-30">
+                                            <div class="post-thumb">
+                                                <img src="https://picsum.photos/400/250?random=4"
+                                                    alt="Future of online learning">
+                                            </div>
+                                            <div class="rp__content">
+                                                <h3><a href="#">The Future of Professional Learning: Trends to Watch</a>
+                                                </h3>
+                                                <p>Explore emerging trends in online education, from AI-powered
+                                                    personalization to virtual reality training experiences.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="avatar__wrap text-center mb-45">
+                                <div class="avatar-img">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg"
+                                        alt="Dr. Sarah Mitchell">
+                                </div>
+                                <div class="avatar__info">
+                                    <h5>Dr. Sarah Mitchell</h5>
+                                    <div class="avatar__info-social">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-behance"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    </div>
+                                </div>
+                                <div class="avatar__wrap-content">
+                                    <p>Dr. Sarah Mitchell is a leading expert in digital learning and professional
+                                        development with over 15 years of experience in educational technology. As
+                                        WebinarHub's Chief Learning Officer, she has designed and facilitated over 500
+                                        interactive webinars, helping thousands of professionals advance their careers
+                                        through innovative online learning experiences.</p>
+                                </div>
+                            </div>
+                            <div class="comment__wrap pb-45">
+                                <div class="comment__wrap-title">
+                                    <h5>Comments</h5>
+                                </div>
+                                <div class="single__comment mb-35">
+                                    <div class="comments-avatar">
+                                        <img src="https://randomuser.me/api/portraits/women/32.jpg"
+                                            alt="Alina Kelian avatar">
+                                    </div>
+                                    <div class="comment-text">
+                                        <div class="avatar-name mb-15">
+                                            <h6>ALina Kelian</h6>
+                                            <span>19th May 2018</span>
+                                            <a href="#" class="comment-reply"><i class="fas fa-reply"></i>Reply</a>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation
+                                            ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                </div>
+                                <div class="single__comment children mb-35">
+                                    <div class="comments-avatar">
+                                        <img src="https://randomuser.me/api/portraits/men/45.jpg"
+                                            alt="Rlex Kelian avatar">
+                                    </div>
+                                    <div class="comment-text">
+                                        <div class="avatar-name mb-15">
+                                            <h6>Rlex Kelian <i class="fas fa-bookmark"></i></h6>
+                                            <span>19th May 2018</span>
+                                            <a href="#" class="comment-reply"><i class="fas fa-reply"></i>Reply</a>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation
+                                            ullamco laboris nisi ut
+                                            aliquip commodo.</p>
+                                    </div>
+                                </div>
+                                <div class="single__comment">
+                                    <div class="comments-avatar">
+                                        <img src="https://randomuser.me/api/portraits/men/67.jpg"
+                                            alt="Roboto Alex avatar">
+                                    </div>
+                                    <div class="comment-text">
+                                        <div class="avatar-name mb-15">
+                                            <h6>Roboto Alex</h6>
+                                            <span>21th May 2018</span>
+                                            <a href="#" class="comment-reply"><i class="fas fa-reply"></i>Reply</a>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                            nostrud exercitation
+                                            ullamco laboris nisi ut
+                                            aliquip ex ea commodo consequat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="comments" class="comments-area  mt-45">
+                                <div id="respond" class="comment-respond">
+                                    <h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a
+                                                rel="nofollow" id="cancel-comment-reply-link"
+                                                href="/finco/?p=2112#respond" style="display:none;">Cancel
+                                                reply</a></small></h3>
+                                    <form action="http://wordpress.zcube.in/finco/wp-comments-post.php" method="post"
+                                        id="commentform" class="comment-form" novalidate="">
+                                        <p class="comment-notes"><span id="email-notes">Your email address will not be
+                                                published.</span> Required fields are marked <span
+                                                class="required">*</span></p>
+                                        <p class="comment-field"><i class="fas fa-user"></i><input id="author"
+                                                placeholder="Your Name" name="author" type="text"></p>
+                                        <p class="comment-field"><i class="fas fa-envelope"></i><input id="email"
+                                                placeholder="your-real-email@example.com" name="email" type="text"></p>
+                                        <p class="comment-field"><i class="fas fa-globe"></i><input id="url" name="url"
+                                                placeholder="http://your-site-name.com" type="text"> </p>
+                                        <p class="comment-form-comment"><label for="comment">Comment</label> <textarea
+                                                id="comment" name="comment" cols="45" rows="8" maxlength="65525"
+                                                required="required"></textarea></p>
+                                        <p class="form-submit"><input name="submit" type="submit" id="submit"
+                                                class="submit" value="Post Comment"> <input type="hidden"
+                                                name="comment_post_ID" value="2112" id="comment_post_ID">
+                                            <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+                                        </p>
+                                    </form>
+                                </div>
+                                <!-- #respond -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- #right side -->
+                    <div class="col-sm-12 col-md-12 col-lg-4">
+                        <aside class="sidebar-widget">
+                            <section id="search-3" class="widget widget_search">
+                                <h2 class="widget-title">Search</h2>
+                                <form role="search" method="get" class="search-form"
+                                    action="http://wordpress.zcube.in/finco/">
+                                    <label>
+                                        <span class="screen-reader-text">Search for:</span>
+                                        <input type="search" class="search-field" placeholder="Search &hellip;" value=""
+                                            name="s" />
+                                    </label>
+                                    <input type="submit" class="search-submit" value="Search" />
+                                </form>
+                            </section>
+                            <section id="custom_html-5" class="widget_text widget widget_custom_html">
+                                <h2 class="widget-title">Follow Us</h2>
+                                <div class="textwidget custom-html-widget">
+                                    <div class="widget-social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fab fa-wordpress"></i></a>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="categories-1" class="widget widget_categories">
+                                <h2 class="widget-title">Categories</h2>
+                                <ul>
+                                    <li class="cat-item cat-item-16"><a href="#">Webinar Best Practices</a> (12)</li>
+                                    <li class="cat-item cat-item-23"><a href="#">Professional Development</a> (8)</li>
+                                    <li class="cat-item cat-item-18"><a href="#">Online Learning</a> (15)</li>
+                                    <li class="cat-item cat-item-22"><a href="#">Career Growth</a> (6)</li>
+                                    <li class="cat-item cat-item-24"><a href="#">Industry Insights</a> (9)</li>
+                                </ul>
+                            </section>
+                            <section id="recent-posts-4" class="widget widget_recent_entries">
+                                <h2 class="widget-title">Recent Posts</h2>
+                                <ul>
+                                    <li>
+                                        <a href="#">How to Host Your First Professional Webinar</a>
+                                        <span class="post-date">January 10, 2025</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">The ROI of Corporate Webinar Training Programs</a>
+                                        <span class="post-date">January 8, 2025</span>
+                                    </li>
+                                    <li>
+                                        <a href="#">Building Engagement in Virtual Learning Environments</a>
+                                        <span class="post-date">January 5, 2025</span>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section id="tag_cloud-1" class="widget widget_tag_cloud">
+                                <h2 class="widget-title">Popular Tags</h2>
+                                <div class="tagcloud">
+                                    <a href="#" class="tag-cloud-link tag-link-28 tag-link-position-1"
+                                        style="font-size: 22pt;" aria-label="webinars (15 items)">webinars</a>
+                                    <a href="#" class="tag-cloud-link tag-link-17 tag-link-position-2"
+                                        style="font-size: 16.4pt;" aria-label="online learning (8 items)">online
+                                        learning</a>
+                                    <a href="#" class="tag-cloud-link tag-link-20 tag-link-position-3"
+                                        style="font-size: 14pt;"
+                                        aria-label="professional development (6 items)">professional development</a>
+                                    <a href="#" class="tag-cloud-link tag-link-24 tag-link-position-4"
+                                        style="font-size: 12pt;" aria-label="career growth (4 items)">career growth</a>
+                                    <a href="#" class="tag-cloud-link tag-link-25 tag-link-position-5"
+                                        style="font-size: 10pt;" aria-label="interactive training (3 items)">interactive
+                                        training</a>
+                                    <a href="#" class="tag-cloud-link tag-link-26 tag-link-position-6"
+                                        style="font-size: 8pt;" aria-label="virtual events (2 items)">virtual events</a>
+                                    <a href="#" class="tag-cloud-link tag-link-29 tag-link-position-7"
+                                        style="font-size: 8pt;" aria-label="skill building (2 items)">skill building</a>
+                                </div>
+                            </section>
+                        </aside>
+                    </div>
+                    <!-- #right side end -->
+                </div>
+            </div>
+        </section>
+        <!-- inner-blog-end -->
+
+
+
+    </main>
+    <!-- main-area-end -->
+    <!-- footer -->
+    <footer class="footer-bg footer-p fix"
+        style=" background-image: url(img/bg/footer-bg.png); background-repeat: no-repeat; background-position: center;">
+        <!-- <div class="footer-top  pt-70 pb-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-sm-12">
+                        <div class="footer-widget mb-30">
+
+                            <img src="img/logo/it-logo.png" alt="webinar logo">
+
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-sm-12">
+                        <div class="footer-widget footer-link mt-20 text-center">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html"> About Us</a></li>
+                                <li><a href="services.html"> Courses </a></li>
+                                <li><a href="contact.html"> Events</a></li>
+                                <li><a href="blog.html">Blog </a></li>
+                                <li><a href="blog.html">Contact Us </a></li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-sm-12">
+                        <div class="footer-widget footer-social mt-15  text-right text-xl-right">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="footer-center  pt-70 pb-40">
+            <div class="container">
+                <div class="row justify-content-between">
+
+                    <div class="col-xl-3 col-lg-3 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>About Us</h2>
+                            </div>
+                            <div class="footer-link">
+                                WebinarHub is your premier destination for professional development through interactive
+                                online learning. We connect industry experts with ambitious professionals, delivering
+                                high-quality webinars, coaching programs, and educational content that drives real
+                                career growth and business success.
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>Contact Us</h2>
+                            </div>
+                            <div class="f-contact">
+                                <ul>
+                                    <li>
+                                        <i class="icon fal fa-map-marker-check"></i>
+                                        <span>1247/Plot No. 39, 15th Phase, <br>LHB Colony, Kanpur</span>
+                                    </li>
+                                    <li>
+                                        <i class="icon fal fa-phone"></i>
+                                        <span>1800-121-3637<br>+91-7052-101-786</span>
+                                    </li>
+                                    <li><i class="icon fal fa-envelope"></i>
+                                        <span>
+                                            <a href="mailto:info@example.com">info@example.com</a>
+                                            <br>
+                                            <a href="mailto:help@example.com">help@example.com</a>
+                                        </span>
+                                    </li>
+
+
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>Our Services</h2>
+                            </div>
+                            <div class="footer-link">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="about.html">Content & Pricing</a></li>
+                                    <li><a href="coaches.html">Coaches</a></li>
+                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-3 col-lg-3 col-sm-6">
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title">
+                                <h2>Company Details</h2>
+                            </div>
+                            <div class="footer-link">
+                                WebinarHub - Your premier destination for online learning and professional development
+                                through interactive webinars.
+                                <br>
+                                For enquiries and support, please visit the <a href="contact.html">Contact</a> page.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        Copyright &copy; 2025 WebHub. All rights reserved.
+                    </div>
+                    <div class="col-lg-6 text-right text-xl-right">
+                        <ul>
+                            <li><a href="privacy.html">Privacy Statement</a></li>
+                            <li><a href="terms.html">Terms</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-end -->
+
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/one-page-nav-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/paroller.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/js_isotope.pkgd.min.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/parallax-scroll.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/element-in-view.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
