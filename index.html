@@ -32,8 +32,6 @@
             min-height: 400px;
         }
 
-        .eventes-box {}
-
         #round {
             border-radius: 50%;
         }
@@ -311,8 +309,8 @@
 
         /* Mobile Menu Button Styles */
         .mobile-menu-btn {
-            background: rgba(255, 122, 90, 0.1);
-            border: 2px solid #ff7a5a;
+            background: rgba(0, 46, 91, 0.1);
+            border: 2px solid #002e5b;
             padding: 8px;
             cursor: pointer;
             display: flex;
@@ -327,18 +325,13 @@
         }
 
         .mobile-menu-btn:hover {
-            background: #ff7a5a;
             transform: scale(1.05);
-        }
-
-        .mobile-menu-btn:hover .hamburger-line {
-            background-color: #fff;
         }
 
         .hamburger-line {
             width: 25px;
             height: 3px;
-            background-color: #ff7a5a;
+            background-color: #002e5b;
             margin: 2px 0;
             transition: 0.3s;
             border-radius: 2px;
@@ -346,16 +339,15 @@
 
         /* Hamburger animation when active */
         .mobile-menu-btn.active {
-            background: #ff7a5a;
-            border-color: #ff6b4a;
+            border-color: #002e5b;
         }
 
         .mobile-menu-btn.active .hamburger-line {
-            background-color: #fff;
+            background-color: #002e5b;
         }
 
         .mobile-menu-btn.active .hamburger-line:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
+            transform: rotate(-45deg) translate(-4px, 4px);
         }
 
         .mobile-menu-btn.active .hamburger-line:nth-child(2) {
@@ -363,7 +355,12 @@
         }
 
         .mobile-menu-btn.active .hamburger-line:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
+            transform: rotate(45deg) translate(-6px, -6px);
+        }
+
+        /* Hamburger visited state */
+        .mobile-menu-btn:visited .hamburger-line {
+            background-color: #002e5b;
         }
 
         /* Mobile menu dropdown */
@@ -482,6 +479,13 @@
             justify-content: center;
             font-size: 12px;
         }
+
+        /* Custom hover color for outline primary buttons */
+        .btn-outline-primary:hover {
+            background-color: #010f2e !important;
+            border-color: #010f2e !important;
+            color: #fff !important;
+        }
     </style>
 </head>
 
@@ -591,21 +595,19 @@
                 <div class="single-slider slider-bg d-flex align-items-center"
                     style="background: url(img/slider/slider_img_bg.png) no-repeat;background-position: center center;">
                     <div class="container">
-                        <div class="row justify-content-center pb-60">
+                        <div class="row justify-content-center pt-0  pb-60">
                             <div class="col-lg-7">
                                 <div class="slider-content s-slider-content mt-200">
 
-                                    <h2 data-animation="fadeInUp" data-delay=".4s">Join Our Webinars</h2>
-                                    <p data-animation="fadeInUp" data-delay=".6s">Learn from expert speakers in real
-                                        time. Interactive sessions with live Q&A, practical takeaways, and certificates.
-                                    </p>
+                                    <h2 data-animation="fadeInUp" data-delay=".4s">Join Live Seminars</h2>
+                                    <p data-animation="fadeInUp" data-delay=".6s">Connect with industry experts from anywhere in the world. Participate in interactive web seminars, ask questions in real-time, and advance your skills with cutting-edge knowledge and practical insights.</p>
 
                                     <div class="subricbe" data-animation="fadeInDown" data-delay=".4s">
                                         <form action="news-mail.php" method="post" class="contact-form ">
-                                            <label><i class="icon fal fa-envelope"></i> Get webinar updates</label>
+                                            <label><i class="icon fal fa-envelope"></i> Email Address</label>
                                             <input type="text" id="email2" name="email2" class="header-input"
-                                                placeholder="Your email address..." required>
-                                            <button class="btn header-btn"> Register Now </button>
+                                                placeholder="Enter your email for seminar updates..." required>
+                                            <button class="btn header-btn"> Get Seminar Alerts </button>
                                         </form>
                                     </div>
 
@@ -613,8 +615,7 @@
                             </div>
                             <div class="col-lg-5">
                                 <div class="slider-img" data-animation="fadeInUp" data-delay=".4s">
-                                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&h=800&q=80"
-                                        alt="Professional webinar presentation">
+                                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=564&h=646&q=80" alt="Business seminar presentation and audience">
                                 </div>
                             </div>
                         </div>
@@ -628,7 +629,7 @@
         </section>
         <!-- slider-area-end -->
         <!-- about-area -->
-        <section id="about" class="about-area about-p pt-60 pb-60 p-relative"
+        <!-- <section id="about" class="about-area about-p pt-60 pb-60 p-relative"
             style="background: url(img/features/about-bg-aliments.png) no-repeat;background-position: center center;">
             <div class="container">
                 <div class="row align-items-center">
@@ -683,10 +684,10 @@
 
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- about-area-end -->
         <!-- vedio-area -->
-        <section id="vedio" class="vedio-area pt-60 pb-60 fix"
+        <!-- <section id="vedio" class="vedio-area pt-60 pb-60 fix"
             style=" background-image: url(img/video/vedio-bg.png); background-repeat: no-repeat;">
             <div class="container">
                 <div class="row">
@@ -722,11 +723,11 @@
 
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- vedio-area-end -->
 
         <!-- services-area -->
-        <section id="services" class="services-area pb-60 fix"
+        <!-- <section id="services" class="services-area pb-60 fix"
             style=" background-image: url(img/bg/services-bg-aliments.png); background-repeat: no-repeat; background-position: center;">
             <div class="container">
 
@@ -823,14 +824,14 @@
 
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- services-area-end -->
 
         <!-- featured-courses-area -->
 
         <!-- featured-courses-area-end -->
         <!-- eventes-area -->
-        <section id="eventes" class="eventes-area fix pt-60 pb-60"
+        <!-- <section id="eventes" class="eventes-area fix pt-60 pb-60"
             style=" background-image: url(img/bg/event-bg-aliments.png); background-repeat: no-repeat; background-position: center;">
             <div class="container">
                 <div class="row">
@@ -973,18 +974,18 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- eventes-area-end -->
 
-        <!-- video-gallery-section -->
-        <section class="video-gallery-section pt-60 pb-60" style="background-color: #f8f9fa;">
+        <!-- webinar-modules-section -->
+        <section class="webinar-modules-section pt-60 pb-60" style="background-color: #f8f9fa;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title center-align text-center mb-50">
-                            <h5>Video Library</h5>
-                            <h2>Watch Previous Webinar Highlights</h2>
-                            <p>Get a preview of our expert-led sessions and see what makes our webinars so engaging</p>
+                            <h5>Webinar Modules</h5>
+                            <h2>Choose Your Learning Path</h2>
+                            <p>Select individual modules or complete packages to advance your professional skills</p>
                         </div>
                     </div>
                 </div>
@@ -993,20 +994,19 @@
                         <div class="video-card">
                             <div class="video-thumbnail"
                                 style="background-image: url(https://images.unsplash.com/photo-1551818255-e6e10975bc17?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80); background-size: cover; background-position: center; height: 200px; border-radius: 10px; position: relative;">
-                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                                    class="video-play-btn popup-video">
-                                    <div class="play-btn-small">
-                                        <i class="fas fa-play"></i>
-                                    </div>
-                                </a>
                             </div>
                             <div class="video-info mt-20">
-                                <h5>Leadership in the Digital Age</h5>
-                                <p>Learn essential leadership skills for managing remote teams and digital
-                                    transformation.</p>
-                                <div class="video-meta">
-                                    <span><i class="fas fa-clock"></i> 45 min</span>
-                                    <span><i class="fas fa-eye"></i> 2.5K views</span>
+                                <h5>Webinar Module 1</h5>
+                                <h6>Project Preparation</h6>
+                                <!-- <p>Learn the fundamentals of project planning and preparation for successful execution.</p> -->
+                                <div class="video-meta mb-20">
+                                    <span style="font-size: 18px; font-weight: 600; color: #ff6b35;">Price: 75€</span>
+                                    <span style="color: #666;">(or package price)</span>
+                                </div>
+                                <div class="module-actions">
+                                    <a href="#" class="btn btn-outline-primary me-2" style="margin-right: 10px;">Read More &
+Order</a>
+                                    <!-- <a href="#" class="btn ss-btn">Order</a> -->
                                 </div>
                             </div>
                         </div>
@@ -1015,20 +1015,19 @@
                         <div class="video-card">
                             <div class="video-thumbnail"
                                 style="background-image: url(https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80); background-size: cover; background-position: center; height: 200px; border-radius: 10px; position: relative;">
-                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                                    class="video-play-btn popup-video">
-                                    <div class="play-btn-small">
-                                        <i class="fas fa-play"></i>
-                                    </div>
-                                </a>
                             </div>
                             <div class="video-info mt-20">
-                                <h5>Data-Driven Marketing Strategies</h5>
-                                <p>Discover how to leverage analytics and data to create more effective marketing
-                                    campaigns.</p>
-                                <div class="video-meta">
-                                    <span><i class="fas fa-clock"></i> 38 min</span>
-                                    <span><i class="fas fa-eye"></i> 3.1K views</span>
+                                <h5>Webinar Module 2</h5>
+                                <h6>Strategy Development</h6>
+                                <!-- <p>Master strategic thinking and develop comprehensive business strategies.</p> -->
+                                <div class="video-meta mb-20">
+                                    <span style="font-size: 18px; font-weight: 600; color: #ff6b35;">Price: 85€</span>
+                                    <span style="color: #666;">(or package price)</span>
+                                </div>
+                                <div class="module-actions">
+                                    <a href="#" class="btn btn-outline-primary me-2" style="margin-right: 10px;">Read More &
+Order</a>
+                                    <!-- <a href="#" class="btn ss-btn">Order</a> -->
                                 </div>
                             </div>
                         </div>
@@ -1037,19 +1036,19 @@
                         <div class="video-card">
                             <div class="video-thumbnail"
                                 style="background-image: url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80); background-size: cover; background-position: center; height: 200px; border-radius: 10px; position: relative;">
-                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                                    class="video-play-btn popup-video">
-                                    <div class="play-btn-small">
-                                        <i class="fas fa-play"></i>
-                                    </div>
-                                </a>
                             </div>
                             <div class="video-info mt-20">
-                                <h5>Cloud Migration Best Practices</h5>
-                                <p>Step-by-step guide to successfully migrating your infrastructure to the cloud.</p>
-                                <div class="video-meta">
-                                    <span><i class="fas fa-clock"></i> 52 min</span>
-                                    <span><i class="fas fa-eye"></i> 1.8K views</span>
+                                <h5>Webinar Module 3</h5>
+                                <h6>Implementation & Execution</h6>
+                                <!-- <p>Turn your plans into action with proven implementation methodologies.</p> -->
+                                <div class="video-meta mb-20">
+                                    <span style="font-size: 18px; font-weight: 600; color: #ff6b35;">Price: 95€</span>
+                                    <span style="color: #666;">(or package price)</span>
+                                </div>
+                                <div class="module-actions">
+                                    <a href="#" class="btn btn-outline-primary me-2" style="margin-right: 10px;">Read More &
+Order</a>
+                                    <!-- <a href="#" class="btn ss-btn">Order</a> -->
                                 </div>
                             </div>
                         </div>
@@ -1058,16 +1057,16 @@
                 <div class="row">
                     <div class="col-lg-12 text-center">
                         <div class="slider-btn mt-30">
-                            <a href="#" class="btn ss-btn">View All Videos</a>
+                            <a href="#" class="btn ss-btn">View All Modules</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- video-gallery-section-end -->
+        <!-- webinar-modules-section-end -->
 
         <!-- testimonial-area -->
-        <section class="testimonial-area pt-60 pb-60"
+        <!-- <section class="testimonial-area pt-60 pb-60"
             style=" background-image: url(img/testimonial/test-bg-aliments.png); background-repeat: no-repeat; background-position: center; background-color: #fff7f5;">
             <div class="container">
                 <div class="row">
@@ -1141,7 +1140,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- testimonial-area-end -->
 
 

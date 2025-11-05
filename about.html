@@ -142,8 +142,8 @@
 
         /* Mobile Menu Button Styles */
         .mobile-menu-btn {
-            background: rgba(255, 122, 90, 0.1);
-            border: 2px solid #ff7a5a;
+            background: rgba(0, 46, 91, 0.1);
+            border: 2px solid #002e5b;
             padding: 8px;
             cursor: pointer;
             display: flex;
@@ -158,18 +158,13 @@
         }
 
         .mobile-menu-btn:hover {
-            background: #ff7a5a;
             transform: scale(1.05);
-        }
-
-        .mobile-menu-btn:hover .hamburger-line {
-            background-color: #fff;
         }
 
         .hamburger-line {
             width: 25px;
             height: 3px;
-            background-color: #ff7a5a;
+            background-color: #002e5b;
             margin: 2px 0;
             transition: 0.3s;
             border-radius: 2px;
@@ -177,12 +172,11 @@
 
         /* Hamburger animation when active */
         .mobile-menu-btn.active {
-            background: #ff7a5a;
-            border-color: #ff6b4a;
+            border-color: #002e5b;
         }
 
         .mobile-menu-btn.active .hamburger-line {
-            background-color: #fff;
+            background-color: #002e5b;
         }
 
         .mobile-menu-btn.active .hamburger-line:nth-child(1) {
@@ -194,7 +188,12 @@
         }
 
         .mobile-menu-btn.active .hamburger-line:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
+            transform: rotate(45deg) translate(-4px, -4px);
+        }
+
+        /* Hamburger visited state */
+        .mobile-menu-btn:visited .hamburger-line {
+            background-color: #002e5b;
         }
 
         /* Mobile menu dropdown */

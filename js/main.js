@@ -94,6 +94,9 @@ function mainSlider() {
 	BasicSlider.on('init', function (e, slick) {
 		var $firstAnimatingElements = $('.single-slider:first-child').find('[data-animation]');
 		doAnimations($firstAnimatingElements);
+		// Add custom clearfix class to slick track
+		$(this).find('.slick-track').addClass('custom-slick-clearfix slider-track-clearfix');
+		$(this).addClass('slider-container-fix');
 	});
 	BasicSlider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
 		var $animatingElements = $('.single-slider[data-slick-index="' + nextSlide + '"]').find('[data-animation]');

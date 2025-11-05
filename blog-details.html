@@ -32,6 +32,466 @@
             min-height: 400px;
         }
 
+        #round {
+            border-radius: 50%;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 107, 53, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+            animation: pulse 2s infinite;
+        }
+
+        .play-button:hover {
+            background: #ff6b35;
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 107, 53, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 53, 0);
+            }
+        }
+
+        .video-img {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            min-height: 400px;
+        }
+
+        .video-i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .slider-img img,
+        .s-about-img img {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .box-courses img {
+            transition: transform 0.3s ease;
+        }
+
+        .box-courses:hover img {
+            transform: scale(1.05);
+        }
+
+        .single-testimonial .testi-author img {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+        }
+
+        .blog-thumb2 img {
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .single-post2:hover .blog-thumb2 img {
+            transform: scale(1.05);
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-decoration: none;
+        }
+
+        .play-btn-small {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 107, 53, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .play-btn-small:hover {
+            background: #ff6b35;
+            transform: scale(1.1);
+        }
+
+        .video-info h5 {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .video-info p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .video-meta {
+            display: flex;
+            gap: 20px;
+        }
+
+        .video-meta span {
+            color: #999;
+            font-size: 0.8rem;
+        }
+
+        .video-meta i {
+            margin-right: 5px;
+            color: #ff6b35;
+        }
+
+        /* Search icon styling */
+        .search-top2 {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .search-top2 ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-top2 li {
+            margin-left: 0;
+        }
+
+        .search-top2 li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: #fff;
+            border: 2px solid #fe8366;
+            border-radius: 50%;
+            color: #fe8366;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 2.5px 4.33px 15px 0px rgba(250, 162, 146, 0.2);
+        }
+
+        .search-top2 li a:hover {
+            background-color: #fe8366;
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 2.5px 4.33px 20px 0px rgba(250, 162, 146, 0.4);
+        }
+
+        /* Logo text styling */
+        .logo-text {
+            font-size: 28px;
+            font-weight: 700;
+            color: #002e5b;
+            text-decoration: none;
+            display: inline-block;
+            font-family: 'Jost', sans-serif;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: #fe8366;
+        }
+
+        /* Center navigation */
+        .main-menu ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-menu ul li {
+            margin: 0 15px;
+        }
+
+        /* Hide search on mobile, show in hamburger */
+        .search-mobile-hidden {
+            display: none;
+        }
+
+        /* Logo mobile styling */
+        .logo-text {
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 991px) {
+            .search-top2 {
+                display: none !important;
+            }
+
+            .search-mobile-hidden {
+                display: block;
+            }
+
+            .main-menu {
+                display: none !important;
+            }
+
+            .logo-text {
+                font-size: 22px;
+            }
+        }
+
+        /* Ensure header is above mobile menu */
+        #header-sticky {
+            z-index: 10000;
+        }
+
+        /* Logo and hamburger alignment */
+        .header-right {
+            height: 70px;
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        .logo {
+            height: 70px;
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        /* Mobile Menu Button Styles */
+        .mobile-menu-btn {
+            background: rgba(0, 46, 91, 0.1);
+            border: 2px solid #002e5b;
+            padding: 8px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .hamburger-line {
+            width: 25px;
+            height: 3px;
+            background-color: #002e5b;
+            margin: 2px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        /* Hamburger animation when active */
+        .mobile-menu-btn.active {
+            border-color: #002e5b;
+        }
+
+        .mobile-menu-btn.active .hamburger-line {
+            background-color: #002e5b;
+        }
+
+        .mobile-menu-btn.active .hamburger-line:nth-child(1) {
+            transform: rotate(-45deg) translate(-4px, 4px);
+        }
+
+        .mobile-menu-btn.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active .hamburger-line:nth-child(3) {
+            transform: rotate(45deg) translate(-4px, -4px);
+        }
+
+        /* Hamburger visited state */
+        .mobile-menu-btn:visited .hamburger-line {
+            background-color: #002e5b;
+        }
+
+        /* Mobile menu dropdown */
+        .mobile-menu-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #fff;
+            display: none;
+            z-index: 9999;
+            box-shadow: 0 5px 15px rgba(255, 122, 90, 0.3);
+            max-height: calc(100vh - 70px);
+            overflow-y: auto;
+            border-radius: 0 0 10px 10px;
+            border-top: none;
+        }
+
+        /* Container for mobile menu */
+        .mobile-menu-container {
+            position: relative;
+        }
+
+        .mobile-menu-dropdown.show {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .mobile-menu-dropdown ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-menu-dropdown ul li {
+            border-bottom: 1px solid rgba(255, 122, 90, 0.2);
+        }
+
+        .mobile-menu-dropdown ul li:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu-dropdown ul li a {
+            display: block;
+            padding: 15px 20px;
+            color: #002e5b;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mobile-menu-dropdown ul li a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background: rgba(255, 122, 90, 0.1);
+            transition: width 0.3s ease;
+        }
+
+        .mobile-menu-dropdown ul li a:hover::before {
+            width: 100%;
+        }
+
+        .mobile-menu-dropdown ul li a:hover {
+            background-color: rgba(255, 122, 90, 0.1);
+            color: #ff7a5a;
+            transform: translateX(5px);
+        }
+
+        /* Search in mobile menu */
+        .mobile-search {
+            padding: 15px 20px;
+            border-bottom: 2px solid #ff7a5a;
+            background-color: rgba(255, 122, 90, 0.05);
+        }
+
+        .mobile-search a {
+            color: #002e5b;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+
+        .mobile-search a:hover {
+            color: #ff7a5a;
+            transform: translateX(5px);
+        }
+
+        .mobile-search i {
+            width: 20px;
+            height: 20px;
+            background: #ff7a5a;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        /* Custom hover color for outline primary buttons */
+        .btn-outline-primary:hover {
+            background-color: #010f2e !important;
+            border-color: #010f2e !important;
+            color: #fff !important;
+        }
+
+        /* Custom styles for video and images */
+        .play-button-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            min-height: 400px;
+        }
+
         .play-button {
             width: 80px;
             height: 80px;
@@ -303,8 +763,8 @@
 
         /* Mobile Menu Button Styles */
         .mobile-menu-btn {
-            background: rgba(255, 122, 90, 0.1);
-            border: 2px solid #ff7a5a;
+            background: rgba(0, 46, 91, 0.1);
+            border: 2px solid #002e5b;
             padding: 8px;
             cursor: pointer;
             display: flex;
@@ -319,18 +779,17 @@
         }
 
         .mobile-menu-btn:hover {
-            background: #ff7a5a;
             transform: scale(1.05);
         }
 
         .mobile-menu-btn:hover .hamburger-line {
-            background-color: #fff;
+            background-color: #002e5b;
         }
 
         .hamburger-line {
             width: 25px;
             height: 3px;
-            background-color: #ff7a5a;
+            background-color: #002e5b;
             margin: 2px 0;
             transition: 0.3s;
             border-radius: 2px;
@@ -338,12 +797,11 @@
 
         /* Hamburger animation when active */
         .mobile-menu-btn.active {
-            background: #ff7a5a;
-            border-color: #ff6b4a;
+            border-color: #002e5b;
         }
 
         .mobile-menu-btn.active .hamburger-line {
-            background-color: #fff;
+            background-color: #002e5b;
         }
 
         .mobile-menu-btn.active .hamburger-line:nth-child(1) {
@@ -355,7 +813,7 @@
         }
 
         .mobile-menu-btn.active .hamburger-line:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
+            transform: rotate(45deg) translate(-4px, -4px);
         }
 
         /* Mobile menu dropdown */
@@ -542,7 +1000,8 @@
                 display: none !important;
             }
         }
-        .cen{
+
+        .cen {
             min-width: 720px;
             margin: 0 auto;
             max-width: 1150px;
@@ -554,75 +1013,76 @@
     <!-- header -->
     <header class="header-area header-three">
         <div id="header-sticky" class="menu-area">
-            <div class="container mobile-menu-container"></div>
-            <div class="second-menu">
-                <div class="row align-items-center cen">
-                    <!-- Logo - Left -->
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-6">
-                        <div class="logo">
-                            <a href="index.html" class="logo-text">Webinar<span>Hub</span></a>
-                        </div>
-                    </div>
-                    <!-- Navigation - Center (Desktop only) -->
-                    <div class="col-xl-6 col-lg-6 d-none d-lg-block">
-                        <div class="main-menu text-center">
-                            <nav id="mobile-menu" style="display: block;">
-                                <ul>
-                                    <li class="sub">
-                                        <a href="index.html">Home</a>
-                                    </li>
-                                    <li class="sub"><a href="pricing.html">Content & Pricing</a></li>
-                                    <li class="sub">
-                                        <a href="coaches.html">Coaches</a>
-                                    </li>
-                                    <li class="sub">
-                                        <a href="blog.html">Blog</a>
-                                    </li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <!-- Search & Hamburger - Right -->
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-6 margin">
-                        <div class="header-right d-flex align-items-center justify-content-end">
-                            <!-- Search icon for desktop -->
-                            <div class="search-top2 d-none d-lg-block">
-                                <ul>
-                                    <li><a href="#" class="search-trigger" data-toggle="modal"
-                                            data-target=".bs-example-modal-lg"><i class="fas fa-search"></i></a></li>
-                                </ul>
+            <div class="container mobile-menu-container">
+                <div class="second-menu">
+                    <div class="row align-items-center">
+                        <!-- Logo - Left -->
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                            <div class="logo">
+                                <a href="index.html" class="logo-text">Webinar<span>Hub</span></a>
                             </div>
-                            <!-- Mobile menu toggle -->
-                            <div class="mobile-menu d-lg-none">
-                                <button class="mobile-menu-btn" type="button">
-                                    <span class="hamburger-line"></span>
-                                    <span class="hamburger-line"></span>
-                                    <span class="hamburger-line"></span>
-                                </button>
+                        </div>
+                        <!-- Navigation - Center (Desktop only) -->
+                        <div class="col-xl-6 col-lg-6 d-none d-lg-block">
+                            <div class="main-menu text-center">
+                                <nav id="mobile-menu" style="display: block;">
+                                    <ul>
+                                        <li class="sub">
+                                            <a href="index.html">Home</a>
+                                        </li>
+                                        <li class="sub"><a href="pricing.html">Content & Pricing</a></li>
+                                        <li class="sub">
+                                            <a href="coaches.html">Coaches</a>
+                                        </li>
+                                        <li class="sub">
+                                            <a href="blog.html">Blog</a>
+                                        </li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Search & Hamburger - Right -->
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-6">
+                            <div class="header-right d-flex align-items-center justify-content-end">
+                                <!-- Search icon for desktop -->
+                                <div class="search-top2 d-none d-lg-block">
+                                    <ul>
+                                        <li><a href="#" class="search-trigger" data-toggle="modal"
+                                                data-target=".bs-example-modal-lg"><i class="fas fa-search"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Mobile menu toggle -->
+                                <div class="mobile-menu d-lg-none">
+                                    <button class="mobile-menu-btn" type="button">
+                                        <span class="hamburger-line"></span>
+                                        <span class="hamburger-line"></span>
+                                        <span class="hamburger-line"></span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Mobile Menu Dropdown -->
-            <div class="mobile-menu-dropdown" id="mobileMenuDropdown">
-                <div class="mobile-search">
-                    <a href="#" class="search-trigger" data-toggle="modal" data-target=".bs-example-modal-lg">
-                        <i class="fas fa-search"></i>
-                        <span>Search</span>
-                    </a>
+                <!-- Mobile Menu Dropdown -->
+                <div class="mobile-menu-dropdown" id="mobileMenuDropdown">
+                    <div class="mobile-search">
+                        <a href="#" class="search-trigger" data-toggle="modal" data-target=".bs-example-modal-lg">
+                            <i class="fas fa-search"></i>
+                            <span>Search</span>
+                        </a>
+                    </div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pricing.html">Content & Pricing</a></li>
+                        <li><a href="coaches.html">Coaches</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pricing.html">Content & Pricing</a></li>
-                    <li><a href="coaches.html">Coaches</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
             </div>
-        </div>
         </div>
     </header>
     <!-- header-end -->
@@ -712,7 +1172,7 @@
             </section> -->
         <!-- breadcrumb-area-end -->
         <!-- inner-blog -->
-        <section class="inner-blog b-details-p pt-120 pb-80">
+        <section class="inner-blog b-details-p pt-60 pb-60">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
@@ -784,7 +1244,7 @@
                                         analytics helps both instructors and learners track progress and optimize the
                                         learning experience for maximum impact.</p>
                                 </figure>
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-xl-12 col-md-12">
                                         <div class="post__tag">
                                             <h5>Related Tags</h5>
@@ -798,9 +1258,9 @@
                                         </div>
                                     </div>
 
-                                </div>
+                                </div> -->
                             </div>
-                            <div class="posts_navigation pt-35 pb-35">
+                            <!-- <div class="posts_navigation pt-35 pb-35">
                                 <div class="row align-items-center">
                                     <div class="col-xl-4 col-md-5">
                                         <div class="prev-link">
@@ -808,11 +1268,11 @@
                                             <h4><a href="#">Webinar Tools</a></h4>
                                         </div>
                                     </div>
-                                    <!-- <div class="col-xl-4 col-md-2 text-left text-md-center">
+                                    <div class="col-xl-4 col-md-2 text-left text-md-center">
                                         <a href="blog.html" class="blog-filter"><img
                                                 src="https://via.placeholder.com/50x50/ff6b35/ffffff?text=B"
                                                 alt="Blog navigation icon"></a>
-                                    </div> -->
+                                    </div>
                                     <div class="col-xl-4 col-md-5">
                                         <div class="next-link text-left text-md-right">
                                             <span>next Post</span>
@@ -820,7 +1280,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="related__post mt-45 mb-85">
                                 <div class="post-title">
                                     <h4>Related Post</h4>
@@ -857,7 +1317,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="avatar__wrap text-center mb-45">
+                            <!-- <div class="avatar__wrap text-center mb-45">
                                 <div class="avatar-img">
                                     <img src="https://randomuser.me/api/portraits/women/44.jpg"
                                         alt="Dr. Sarah Mitchell">
@@ -879,8 +1339,8 @@
                                         interactive webinars, helping thousands of professionals advance their careers
                                         through innovative online learning experiences.</p>
                                 </div>
-                            </div>
-                            <div class="comment__wrap pb-45">
+                            </div> -->
+                            <!-- <div class="comment__wrap pb-45">
                                 <div class="comment__wrap-title">
                                     <h5>Comments</h5>
                                 </div>
@@ -940,8 +1400,8 @@
                                             aliquip ex ea commodo consequat.</p>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="comments" class="comments-area  mt-45">
+                            </div> -->
+                            <!-- <div id="comments" class="comments-area  mt-45">
                                 <div id="respond" class="comment-respond">
                                     <h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a
                                                 rel="nofollow" id="cancel-comment-reply-link"
@@ -968,8 +1428,8 @@
                                         </p>
                                     </form>
                                 </div>
-                                <!-- #respond -->
-                            </div>
+                                
+                            </div> -->
 
                         </div>
                     </div>
@@ -1027,7 +1487,7 @@
                                     </li>
                                 </ul>
                             </section>
-                            <section id="tag_cloud-1" class="widget widget_tag_cloud">
+                            <!-- <section id="tag_cloud-1" class="widget widget_tag_cloud">
                                 <h2 class="widget-title">Popular Tags</h2>
                                 <div class="tagcloud">
                                     <a href="#" class="tag-cloud-link tag-link-28 tag-link-position-1"
@@ -1048,7 +1508,7 @@
                                     <a href="#" class="tag-cloud-link tag-link-29 tag-link-position-7"
                                         style="font-size: 8pt;" aria-label="skill building (2 items)">skill building</a>
                                 </div>
-                            </section>
+                            </section> -->
                         </aside>
                     </div>
                     <!-- #right side end -->

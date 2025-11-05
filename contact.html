@@ -141,8 +141,8 @@
 
         /* Mobile Menu Button Styles */
         .mobile-menu-btn {
-            background: rgba(255, 122, 90, 0.1);
-            border: 2px solid #ff7a5a;
+            background: rgba(0, 46, 91, 0.1);
+            border: 2px solid #002e5b;
             padding: 8px;
             cursor: pointer;
             display: flex;
@@ -157,18 +157,14 @@
         }
 
         .mobile-menu-btn:hover {
-            background: #ff7a5a;
             transform: scale(1.05);
         }
 
-        .mobile-menu-btn:hover .hamburger-line {
-            background-color: #fff;
-        }
 
         .hamburger-line {
             width: 25px;
             height: 3px;
-            background-color: #ff7a5a;
+            background-color: #002e5b;
             margin: 2px 0;
             transition: 0.3s;
             border-radius: 2px;
@@ -176,12 +172,11 @@
 
         /* Hamburger animation when active */
         .mobile-menu-btn.active {
-            background: #ff7a5a;
-            border-color: #ff6b4a;
+            border-color: #002e5b;
         }
 
         .mobile-menu-btn.active .hamburger-line {
-            background-color: #fff;
+            background-color: #002e5b;
         }
 
         .mobile-menu-btn.active .hamburger-line:nth-child(1) {
@@ -193,7 +188,12 @@
         }
 
         .mobile-menu-btn.active .hamburger-line:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
+            transform: rotate(45deg) translate(-4px, -4px);
+        }
+
+        /* Hamburger visited state */
+        .mobile-menu-btn:visited .hamburger-line {
+            background-color: #002e5b;
         }
 
         /* Mobile menu dropdown */
@@ -439,122 +439,54 @@
             </section> -->
         <!-- breadcrumb-area-end -->
 
-        <!-- services-area -->
-        <section id="services" class="services-area pt-60 pb-60 fix"
+        <!-- contact-details-area -->
+        <section id="contact-details" class="services-area pb-60 fix"
             style=" background-image: url(img/bg/blog-bg-aliments.png); background-repeat: no-repeat; background-position: center center;background-attachment: fixed;">
-            <div class="container">
+            <div class="container pt-30">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title center-align text-center mb-50">
                             <h5>Contact</h5>
                             <h2>
-                                Get In Touch
+                                Contact Details
                             </h2>
                         </div>
-
                     </div>
-
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-12">
-
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10">
                         <div class="services-box mt-0 mb-30 text-center">
-                            <div class="services-icon">
-                                <img src="img/icon/cn-icon1.png" alt="icon01">
-                            </div>
                             <div class="services-content2">
-                                <h5>Email Address</h5>
-                                <p>info@webexample.com <br /> jobs@webtrueexample.com</p>
+                                <h3 style="color: #002e5b; margin-bottom: 30px;">Marke Tyrväinen</h3>
+                                
+                                <div style="text-align: left; max-width: 500px; margin: 0 auto;">
+                                    <div style="margin-bottom: 20px;">
+                                        <h5 style="color: #fe8366; margin-bottom: 10px;">Brand Name:</h5>
+                                        <p>Company Name</p>
+                                    </div>
+                                    
+                                    <div style="margin-bottom: 20px;">
+                                        <h5 style="color: #fe8366; margin-bottom: 10px;">Email Address:</h5>
+                                        <p><a href="mailto:email@example.com" style="color: #002e5b;">email@example.com</a></p>
+                                    </div>
+                                    
+                                    <div style="margin-bottom: 20px;">
+                                        <h5 style="color: #fe8366; margin-bottom: 10px;">Website:</h5>
+                                        <p><a href="#" style="color: #002e5b;">Link to web pages</a></p>
+                                    </div>
+                                    
+                                    <div style="margin-bottom: 20px;">
+                                        <h5 style="color: #fe8366; margin-bottom: 10px;">Phone Number:</h5>
+                                        <p>+358 xxxxxxx<br><small style="color: #666;">(Mon-Fri at 16-17)</small></p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="services-box mt-0 mb-30 text-center">
-                            <div class="services-icon">
-                                <img src="img/icon/cn-icon2.png" alt="icon01">
-                            </div>
-                            <div class="services-content2">
-                                <h5>Phone Number</h5>
-                                <p>090-098-765-09 <br />093-456-432-654-7</p>
-
-                            </div>
-                        </div>
-                        <div class="services-box mt-0 mb-30 text-center">
-                            <div class="services-icon">
-                                <img src="img/icon/cn-icon3.png" alt="icon01">
-                            </div>
-                            <div class="services-content2">
-                                <h5>Office Address</h5>
-                                <p>12/A, Miranda Halim Tower,<br>New York, USA</p>
-
-                            </div>
-                        </div>
-
-
                     </div>
-                    <div class="col-lg-8 col-md-12">
-
-                        <form action="mail.php" method="post" class="contact-form ">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="contact-field p-relative c-name mb-20">
-                                        <input type="text" id="firstn" name="firstn" placeholder="First Name" required>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="contact-field p-relative c-email mb-20">
-                                        <input type="text" id="lastn" name="lastn" placeholder="Last Name" required>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="contact-field p-relative c-subject mb-20">
-                                        <input type="text" id="email" name="email" placeholder="Eamil" required>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="contact-field p-relative c-subject mb-20">
-                                        <input type="text" id="phone" name="phone" placeholder="Phone No." required>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="contact-field p-relative c-option mb-20">
-                                        <select name="services" id="sr">
-                                            <option value="sports-massage">Sports Massage</option>
-                                            <option value="hot-stone-message">Hot Stone Message</option>
-                                            <option value="facil-therophy">Facil & Therophy</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-                                    <div class="contact-field p-relative c-message mb-45">
-                                        <textarea name="message" id="message" cols="30" rows="10"
-                                            placeholder="Write comments"></textarea>
-                                    </div>
-                                    <div class="slider-btn">
-                                        <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">Submint
-                                            Now</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </form>
-
-                    </div>
-
-
                 </div>
             </div>
         </section>
-        <!-- services-area-end -->
-
-        <!-- services-area -->
-        <section id="map" class="map fix">
-            <div class="container-fulid">
-                <div class="row">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d425345.01307524694!2d-112.40523132230999!3d33.60509911295008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b12ed50a179cb%3A0x8c69c7f8354a1bac!2sPhoenix%2C%20AZ%2C%20USA!5e0!3m2!1sen!2sin!4v1616492655751!5m2!1sen!2sin"
-                        width="100" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-            </div>
-        </section>
+        <!-- contact-details-area-end -->
 
 
     </main>

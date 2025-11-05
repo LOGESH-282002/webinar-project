@@ -146,7 +146,6 @@
             border-radius: 16px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
             overflow: hidden;
         }
 
@@ -391,8 +390,8 @@
 
         /* Mobile Menu Button Styles */
         .mobile-menu-btn {
-            background: rgba(255, 122, 90, 0.1);
-            border: 2px solid #ff7a5a;
+            background: rgba(0, 46, 91, 0.1);
+            border: 2px solid #002e5b;
             padding: 8px;
             cursor: pointer;
             display: flex;
@@ -407,18 +406,14 @@
         }
 
         .mobile-menu-btn:hover {
-            background: #ff7a5a;
             transform: scale(1.05);
         }
 
-        .mobile-menu-btn:hover .hamburger-line {
-            background-color: #fff;
-        }
 
         .hamburger-line {
             width: 25px;
             height: 3px;
-            background-color: #ff7a5a;
+            background-color: #002e5b;
             margin: 2px 0;
             transition: 0.3s;
             border-radius: 2px;
@@ -426,12 +421,11 @@
 
         /* Hamburger animation when active */
         .mobile-menu-btn.active {
-            background: #ff7a5a;
-            border-color: #ff6b4a;
+            border-color: #002e5b;
         }
 
         .mobile-menu-btn.active .hamburger-line {
-            background-color: #fff;
+            background-color: #002e5b;
         }
 
         .mobile-menu-btn.active .hamburger-line:nth-child(1) {
@@ -443,7 +437,12 @@
         }
 
         .mobile-menu-btn.active .hamburger-line:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
+            transform: rotate(45deg) translate(-4px, -4px);
+        }
+
+        /* Hamburger visited state */
+        .mobile-menu-btn:visited .hamburger-line {
+            background-color: #002e5b;
         }
 
         /* Mobile menu dropdown */
@@ -561,6 +560,12 @@
             align-items: center;
             justify-content: center;
             font-size: 12px;
+        }
+
+        /* Custom hover color for outline primary buttons */
+        .btn-outline-primary:hover {
+            background-color: #010f2e !important;
+            border-color: #010f2e !important;
         }
     </style>
 </head>
@@ -691,7 +696,7 @@
             </section> -->
         <!-- breadcrumb-area-end -->
         <!-- coaches-intro -->
-        <section class="coaches-intro pt-60">
+        <section class="coaches-intro pt-30">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -718,17 +723,15 @@
                                     alt="Sarah Johnson - Tech Leadership Coach">
                             </div>
                             <div class="coach-info p-4">
-                                <h4 class="coach-name">Sarah Johnson</h4>
-                                <p class="coach-title-role">Tech Leadership & Innovation Coach</p>
+                                <h4 class="coach-name">Name</h4>
+                                <!-- <p class="coach-title-role">Tech Leadership & Innovation Coach</p>
                                 <div class="coach-specialties mb-3">
                                     <span class="specialty-badge">Leadership</span>
                                     <span class="specialty-badge">AI & Machine Learning</span>
                                     <span class="specialty-badge">Startup Strategy</span>
-                                </div>
-                                <p class="coach-bio">Former CTO at Fortune 500 companies with 15+ years of experience in
-                                    technology leadership. Specializes in helping professionals transition into tech
-                                    leadership roles and navigate the rapidly evolving AI landscape.</p>
-                                <div class="coach-stats">
+                                </div> -->
+                                <p class="coach-bio">Introduction</p>
+                                <!-- <div class="coach-stats">
                                     <div class="stat-item">
                                         <strong>500+</strong>
                                         <span>Students Coached</span>
@@ -737,7 +740,7 @@
                                         <strong>15+</strong>
                                         <span>Years Experience</span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="coach-contact">
                                     <a href="#" class="btn btn-outline-primary btn-sm">Book Session</a>
                                     <div class="social-links">
@@ -756,17 +759,15 @@
                                     alt="Michael Chen - Business Strategy Coach">
                             </div>
                             <div class="coach-info p-4">
-                                <h4 class="coach-name">Michael Chen</h4>
-                                <p class="coach-title-role">Business Strategy & Growth Coach</p>
+                                <h4 class="coach-name">Name</h4>
+                                <!-- <p class="coach-title-role">Business Strategy & Growth Coach</p>
                                 <div class="coach-specialties mb-3">
                                     <span class="specialty-badge">Business Strategy</span>
                                     <span class="specialty-badge">Digital Marketing</span>
                                     <span class="specialty-badge">Sales Growth</span>
-                                </div>
-                                <p class="coach-bio">Serial entrepreneur and business consultant who has helped over 200
-                                    startups scale from idea to IPO. Expert in digital transformation, market expansion,
-                                    and sustainable business growth strategies.</p>
-                                <div class="coach-stats">
+                                </div> -->
+                                <p class="coach-bio">Introduction</p>
+                                <!-- <div class="coach-stats">
                                     <div class="stat-item">
                                         <strong>200+</strong>
                                         <span>Businesses Scaled</span>
@@ -775,7 +776,7 @@
                                         <strong>12+</strong>
                                         <span>Years Experience</span>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="coach-contact">
                                     <a href="#" class="btn btn-outline-primary btn-sm">Book Session</a>
                                     <div class="social-links">
@@ -791,7 +792,7 @@
         </section>
 
         <!-- coaching-approach -->
-        <section class="coaching-approach pt-60 pb-60">
+        <!-- <section class="coaching-approach pt-60 pb-60">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -843,10 +844,10 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- success-stories -->
-        <section class="success-stories pt-60 pb-60" style="background-color: #f8f9fa;">
+        <!-- <section class="success-stories pt-60 pb-60" style="background-color: #f8f9fa;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -910,7 +911,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
     </main>
