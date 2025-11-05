@@ -292,6 +292,7 @@
         /* Ensure header is above mobile menu */
         #header-sticky {
             z-index: 10000;
+            background: white;
         }
 
         /* Logo and hamburger alignment */
@@ -485,6 +486,70 @@
             background-color: #010f2e !important;
             border-color: #010f2e !important;
             color: #fff !important;
+        }
+
+        /* Webinar Module States */
+        .module-active {
+            opacity: 1;
+            transform: scale(1);
+            transition: all 0.3s ease;
+        }
+
+        .module-inactive {
+            opacity: 0.6;
+            transform: scale(0.95);
+            transition: all 0.3s ease;
+            filter: grayscale(50%);
+        }
+
+        .module-inactive:hover {
+            opacity: 0.8;
+            transform: scale(0.98);
+        }
+
+        .module-number {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 107, 53, 0.9);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+            z-index: 2;
+        }
+
+        .module-inactive .module-number {
+            background: rgba(153, 153, 153, 0.9);
+        }
+
+        .inactive-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(128, 128, 128, 0.3);
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        .module-inactive h5,
+        .module-inactive h6 {
+            color: #999 !important;
+        }
+
+        .module-active h5 {
+            color: #333;
+        }
+
+        .module-active h6 {
+            color: #ff6b35;
         }
     </style>
 </head>
@@ -990,65 +1055,64 @@
                     </div>
                 </div>
                 <div class="row">
+                    <!-- Inactive Module 1 -->
                     <div class="col-lg-4 col-md-6 mb-30">
-                        <div class="video-card">
+                        <div class="video-card module-inactive">
                             <div class="video-thumbnail"
                                 style="background-image: url(https://images.unsplash.com/photo-1551818255-e6e10975bc17?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80); background-size: cover; background-position: center; height: 200px; border-radius: 10px; position: relative;">
+                                <div class="module-number">3</div>
+                                <div class="inactive-overlay"></div>
                             </div>
                             <div class="video-info mt-20">
-                                <h5>Webinar Module 1</h5>
+                                <h5>Webinar Module 3</h5>
                                 <h6>Project Preparation</h6>
-                                <!-- <p>Learn the fundamentals of project planning and preparation for successful execution.</p> -->
                                 <div class="video-meta mb-20">
-                                    <span style="font-size: 18px; font-weight: 600; color: #ff6b35;">Price: 75€</span>
-                                    <span style="color: #666;">(or package price)</span>
+                                    <span style="font-size: 18px; font-weight: 600; color: #999;">Price: 75€</span>
+                                    <span style="color: #999;">(or package price)</span>
                                 </div>
                                 <div class="module-actions">
-                                    <a href="#" class="btn btn-outline-primary me-2" style="margin-right: 10px;">Read More &
-Order</a>
-                                    <!-- <a href="#" class="btn ss-btn">Order</a> -->
+                                    <button class="btn btn-secondary" disabled>Coming Soon</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Active Module 2 -->
                     <div class="col-lg-4 col-md-6 mb-30">
-                        <div class="video-card">
+                        <div class="video-card module-active">
                             <div class="video-thumbnail"
                                 style="background-image: url(https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80); background-size: cover; background-position: center; height: 200px; border-radius: 10px; position: relative;">
+                                <div class="module-number">1</div>
                             </div>
                             <div class="video-info mt-20">
-                                <h5>Webinar Module 2</h5>
+                                <h5>Webinar Module 1</h5>
                                 <h6>Strategy Development</h6>
-                                <!-- <p>Master strategic thinking and develop comprehensive business strategies.</p> -->
                                 <div class="video-meta mb-20">
                                     <span style="font-size: 18px; font-weight: 600; color: #ff6b35;">Price: 85€</span>
                                     <span style="color: #666;">(or package price)</span>
                                 </div>
                                 <div class="module-actions">
-                                    <a href="#" class="btn btn-outline-primary me-2" style="margin-right: 10px;">Read More &
-Order</a>
-                                    <!-- <a href="#" class="btn ss-btn">Order</a> -->
+                                    <a href="#" class="btn btn-outline-primary me-2" style="margin-right: 10px;">Read More & Order</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Inactive Module 3 -->
                     <div class="col-lg-4 col-md-6 mb-30">
-                        <div class="video-card">
+                        <div class="video-card module-inactive">
                             <div class="video-thumbnail"
                                 style="background-image: url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250&q=80); background-size: cover; background-position: center; height: 200px; border-radius: 10px; position: relative;">
+                                <div class="module-number">2</div>
+                                <div class="inactive-overlay"></div>
                             </div>
                             <div class="video-info mt-20">
-                                <h5>Webinar Module 3</h5>
+                                <h5>Webinar Module 2</h5>
                                 <h6>Implementation & Execution</h6>
-                                <!-- <p>Turn your plans into action with proven implementation methodologies.</p> -->
                                 <div class="video-meta mb-20">
-                                    <span style="font-size: 18px; font-weight: 600; color: #ff6b35;">Price: 95€</span>
-                                    <span style="color: #666;">(or package price)</span>
+                                    <span style="font-size: 18px; font-weight: 600; color: #999;">Price: 95€</span>
+                                    <span style="color: #999;">(or package price)</span>
                                 </div>
                                 <div class="module-actions">
-                                    <a href="#" class="btn btn-outline-primary me-2" style="margin-right: 10px;">Read More &
-Order</a>
-                                    <!-- <a href="#" class="btn ss-btn">Order</a> -->
+                                    <button class="btn btn-secondary" disabled>Coming Soon</button>
                                 </div>
                             </div>
                         </div>
