@@ -805,12 +805,63 @@ body {
 .slider-four .slider-img {
     margin-top: 30px;
     margin-right: -120px;
+    position: relative;
+}
 
+.slider-four .slider-img::before {
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: -50px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    background: #feebe5;
+    z-index: 0;
+    transition: left 0.2s ease;
+}
+
+/* Dynamic orange box positioning based on screen width */
+@media (min-width: 993px) {
+    .slider-four .slider-img::before {
+        left: -50px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .slider-four .slider-img::before {
+        left: -30px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .slider-four .slider-img::before {
+        left: -10px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .slider-four .slider-img::before {
+        left: 10px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .slider-four .slider-img::before {
+        left: 30px;
+    }
+}
+
+@media (min-width: 1500px) {
+    .slider-four .slider-img::before {
+        left: 50px;
+    }
 }
 
 .slider-four .slider-img img {
     position: relative;
     z-index: 1;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .slider-four .slider-bg .text2 h5 {

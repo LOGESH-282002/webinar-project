@@ -918,6 +918,13 @@
         margin-right: 0;
     }
 
+    .slider-four .slider-img::before {
+        left: 10px !important;
+        width: calc(100% + 20px) !important;
+        height: calc(100% + 30px) !important;
+        top: 15px;
+    }
+
     .slider-active .slick-track::before {
         background: #fff5f4;
     }
